@@ -1,0 +1,694 @@
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>豆瓣top250数据可视化</title>
+    <link rel="icon" type="image/png" href="static/assets/images/favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="static/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/nice-select.css">
+    <link rel="stylesheet" href="static/assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="static/assets/css/main.css">
+</head>
+<body>
+
+<!-- preloader start -->
+<!-- <div class="preloader">
+  <div class="preloader-box">
+    <div>L</div>
+    <div>O</div>
+    <div>A</div>
+    <div>D</div>
+    <div>I</div>
+    <div>N</div>
+    <div>G</div>
+  </div>
+</div> -->
+<!-- preloader end -->
+<!-- header section  -->
+<!-- header-section start  -->
+<header class="header-section">
+
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl p-0 align-items-center">
+                <a class="site-logo site-title" href="home-one.html"><img src="static/assets/images/logo.png"
+                                                                          alt="site-logo"><span class="logo-icon"><i
+                        class="flaticon-fire"></i></span></a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="menu-toggle"></span>
+                </button>
+                <span class="header-top-open-btn"><i class="fa fa-tasks"></i></span>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav main-menu ml-auto">
+                        <li class="/movie"><a href="/">首页</a></li>
+                        <li><a href="/movie">电影</a>
+                        <li class="menu_has_children"><a href="/score">评分</a></li>
+                        <li class="menu_has_children"><a href="/word">词云</a></li>
+                        <li class="menu_has_children"><a href="/team">团队</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </div><!-- header-bottom end -->
+</header>
+<!-- header-section end  -->
+
+<!-- hero-setion start -->
+<section class="hero-setion bg_img" data-background="./static/assets/images/banner/1.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="hero-content">
+                    <h2 class="hero-title">豆瓣数据分析</h2>
+                    <p>Praesent ultricies, phasellus a semper eget sed pulvinar senectus, leo urna placerat.massa porta.
+                        Porta purus wisi quis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- hero-setion end -->
+
+<!-- crew-section start -->
+<section class="crew-section pt-120 pb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-header text-center">
+                    <h3 class="section-sub-title">数据分析</h3>
+                    <h2 class="section-title">豆瓣电影top250</h2>
+                    <div class="section-title-line"><img src="static/assets/images/section-title-shape.png" alt="image">
+                    </div>
+                    <p>应用python爬虫、Flask框架、Echarts、WorldCloud等技术实现</p>
+                </div><!-- section-header end -->
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- crew-section end  -->
+
+<!-- counter-section start -->
+<div class="counter-section bg_img base-overlay">
+    <div class="container">
+        <div class="row mb-none-30 justify-content-lg-between">
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="/movie">
+                    <div class="counter-item mb-30">
+                        <span class="counter">250</span>
+                        <p>经典电影</p>
+                    </div>
+                </a>
+            </div><!-- counter-item end -->
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="/score">
+                    <div class="counter-item mb-30">
+                        <span class="counter">25</span><span>+</span>
+                        <p>评分统计</p>
+                    </div>
+                </a>
+            </div><!-- counter-item end -->
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="/word">
+                    <div class="counter-item mb-30">
+                        <span class="counter">1459</span>
+                        <p>词汇统计</p>
+                    </div>
+                </a>
+            </div><!-- counter-item end -->
+            <div class="col-lg-2 col-sm-3 col-6">
+                <a href="/team">
+                    <div class="counter-item mb-30">
+                        <span class="counter">256</span>
+                        <p>团队成员</p>
+                    </div>
+                </a>
+            </div><!-- counter-item end -->
+           
+        </div>
+    </div>
+</div>
+<!-- counter-section end -->
+
+<!-- about-section start -->
+<section class="about-section pt-120 pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-thumb wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.3s">
+                    <img src="static/assets/images/about/1.jpg" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                    <div class="section-header style--two">
+                        <h3 class="section-sub-title">About Shipline</h3>
+                        <h2 class="section-title">about us</h2>
+                        <div class="section-title-line"><img src="static/assets/images/section-title-shape.png"
+                                                             alt="image"></div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, sodales at bibendum, magna nulla odio tellus, rhoncus nam et eu
+                        semper condimentum, amet arcu, ullamcorper sodales. Ut condimentum ipsum consequat dolores, arcu
+                        cras non velit. Spendisse magna suspendisse malesuada ligula ac, massa sollicitudin Odio felis,
+                        elit a, dui ac, dui per vestibulum pellentesque. Scelerisque</p>
+                    <p>vestibulum, odio gravida, massa ultricies lectus adipiscing sem, mauris eros sit morbi wisi arcu
+                        diam. Mauris justo eget semper cras, non</p>
+                    <div class="btn-area">
+                        <a href="contact.html" class="cmn-btn-border">get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-120 mb-none-30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="about-item mb-30 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.3s">
+                    <i class="flaticon-cruise"></i>
+                    <h4 class="title">Luxurious Charter Sirene</h4>
+                    <p>Integer sagittis nisi nec tortor fermentum aquet. Integer non neque tempor, porttitor lorem id,
+                        commodo nulla. Nullam sed ultricie</p>
+                </div>
+            </div><!-- about-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="about-item mb-30 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                    <i class="flaticon-captain"></i>
+                    <h4 class="title">Friendly Crew</h4>
+                    <p>Integer sagittis nisi nec tortor fermentum aquet. Integer non neque tempor, porttitor lorem id,
+                        commodo nulla. Nullam sed ultricie</p>
+                </div>
+            </div><!-- about-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="about-item mb-30 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                    <i class="flaticon-user-experience"></i>
+                    <h4 class="title">25 Years Experience</h4>
+                    <p>Integer sagittis nisi nec tortor fermentum aquet. Integer non neque tempor, porttitor lorem id,
+                        commodo nulla. Nullam sed ultricie</p>
+                </div>
+            </div><!-- about-item end -->
+        </div>
+    </div>
+</section>
+<!-- about-section end -->
+
+
+<!-- destination-section start -->
+<section class="destination-section pt-120 pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-header text-center">
+                    <h3 class="section-sub-title">Choose Your Destination</h3>
+                    <h2 class="section-title">Our Destination</h2>
+                    <div class="section-title-line"><img src="static/assets/images/section-title-shape.png" alt="image">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, sodales at bibendum, magna nulla odio tellus rhoncus nam et eu semper
+                        condime</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-none-30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/1.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Morocco
+                            - Denmark</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-one">800 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/2.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Australia
+                            - Bahrain</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-two">600 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/3.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Croatia
+                            - Dominica</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-three">900 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/4.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Croatia
+                            - Morocco</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-three">250 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/5.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Burundi
+                            - Dominica</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-four">300 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="destination-item mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/destination/6.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3 class="place-name"><a href="destination-details.html"><i class="fa fa-map-marker"></i>Burundi
+                            - Brazil</a></h3>
+                        <div class="info">
+                            <span class="date">sep 03 - dec 10</span>
+                            <span class="price color-four">300 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- destination-item end -->
+        </div>
+    </div>
+</section>
+<!-- destination-section end -->
+
+<!-- booking-section start  -->
+<section class="booking-section">
+    <div class="booking-section-shape bg_img" data-background="static/assets/images/bg/booking.jpg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="booking-thumb">
+                    <img src="static/assets/images/booking.jpg" alt="image">
+                    <a href="#" data-rel="lightcase:myCollection" class="video-button"><i class="fa fa-play"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="booking-warpper">
+                    <div class="section-header style--two">
+                        <h3 class="section-sub-title">About Shipline</h3>
+                        <h2 class="section-title">book a yacht</h2>
+                        <div class="section-title-line"><img src="static/assets/images/section-title-shape.png"
+                                                             alt="image"></div>
+                        <p>Lorem ipsum dolor sit amet, sodat bibendum, magna nulla odio tellus rhoncus nam et eu </p>
+                    </div><!-- section-header end -->
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Full Name</label>
+                                <input type="text" name="booking_name" id="booking_name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Number of People</label>
+                                <select name="booking_people" id="booking_people">
+                                    <option>00</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Date Form</label>
+                                <input type='text' id="booking_date_from" name="booking_date_from"
+                                       class='datepicker-here' data-language='en'>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Date To</label>
+                                <input type='text' id="booking_date_to" name="booking_date_to" class='datepicker-here'
+                                       data-language='en'>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Yacht Type Interested In:</label>
+                                <select name="booking_yacht" id="booking_yacht">
+                                    <option value="motor yacht">Motor Yacht</option>
+                                    <option value="yacht one">Yacht Two</option>
+                                    <option value="yacht two">Yacht Three</option>
+                                    <option value="yacht three">Yacht Four</option>
+                                    <option value="yacht four">Yacht Five</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Email Address</label>
+                                <input type="email" name="booking_email" id="booking_email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Phone Number</label>
+                                <input type="tel" name="booking_phone" id="booking_phone">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Special Requirements</label>
+                                <textarea name="booking_extra" id="booking_extra"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="cmn-btn-border">get in touch</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- booking-section end -->
+
+
+<!-- testimonial-section start -->
+<section class="testimonial-section section-bg pt-120 pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-header text-center">
+                    <h3 class="section-sub-title">our client</h3>
+                    <h2 class="section-title">client feedback</h2>
+                    <div class="section-title-line"><img src="static/assets/images/section-title-shape.png" alt="image">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, sodales at bibendum, magna nulla odio tellus rhoncus nam et eu semper
+                        condime</p>
+                </div><!-- section-header end -->
+            </div>
+        </div>
+        <div class="testimonial-slider owl-carousel">
+            <div class="testmonial-single">
+                <div class="clinet-message">
+                    <p>Eleifend condimentum maecenas con quat hendrerit integer, ornare eget dap phas ellusnisl
+                        imperdie</p>
+                </div>
+                <div class="client-details">
+                    <div class="thumb"><img src="static/assets/images/testimonial/1.png" alt="image"></div>
+                    <div class="info">
+                        <h6 class="name">Hera Rahman</h6>
+                        <span class="designation">CEO Insurance</span>
+                    </div>
+                </div>
+            </div><!-- testmonial-single end -->
+            <div class="testmonial-single">
+                <div class="clinet-message">
+                    <p>Eleifend condimentum maecenas con quat hendrerit integer, ornare eget dap phas ellusnisl
+                        imperdie</p>
+                </div>
+                <div class="client-details">
+                    <div class="thumb"><img src="static/assets/images/testimonial/2.png" alt="image"></div>
+                    <div class="info">
+                        <h6 class="name">Gabriel Jack</h6>
+                        <span class="designation">CEO Insurance</span>
+                    </div>
+                </div>
+            </div><!-- testmonial-single end -->
+            <div class="testmonial-single">
+                <div class="clinet-message">
+                    <p>Eleifend condimentum maecenas con quat hendrerit integer, ornare eget dap phas ellusnisl
+                        imperdie</p>
+                </div>
+                <div class="client-details">
+                    <div class="thumb"><img src="static/assets/images/testimonial/3.png" alt="image"></div>
+                    <div class="info">
+                        <h6 class="name">Isabella Clara</h6>
+                        <span class="designation">CEO Insurance</span>
+                    </div>
+                </div>
+            </div><!-- testmonial-single end -->
+        </div>
+    </div>
+</section>
+<!-- testimonial-section end -->
+
+<!-- blog-section start  -->
+<section class="blog-section pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-header text-center">
+                    <h3 class="section-sub-title">latest news post</h3>
+                    <h2 class="section-title">our blog post</h2>
+                    <div class="section-title-line"><img src="static/assets/images/section-title-shape.png" alt="image">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, sodales at bibendum, magna nulla odio tellus rhoncus nam et eu semper
+                        condime</p>
+                </div><!-- section-header end -->
+            </div>
+        </div>
+        <div class="row mb-none-30">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-single mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/blog/1.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <div class="post-header">
+                            <h3 class="post-title"><a href="blog-details.html">White Send of The Desert Discovery</a>
+                            </h3>
+                            <ul class="post-meta">
+                                <li><a href="#0"><i class="fa fa-user"></i>By Admin</a></li>
+                                <li><a href="#0"><i class="fa fa-clock-o"></i>Sep 03</a></li>
+                                <li><a href="#0"><i class="fa fa-comments"></i>03</a></li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, elit ped mentum mattis ac porttitor, vel vel justo purus sagittis
+                            porta lobortis, amet integer</p>
+                        <a href="blog-details.html" class="text-btn">Read more<i
+                                class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div><!-- blog-single end -->
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-single mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/blog/2.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <div class="post-header">
+                            <h3 class="post-title"><a href="blog-details.html">Sagittisamet purus facilisi praesent
+                                mollis</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="#0"><i class="fa fa-user"></i>By Admin</a></li>
+                                <li><a href="#0"><i class="fa fa-clock-o"></i>Sep 03</a></li>
+                                <li><a href="#0"><i class="fa fa-comments"></i>03</a></li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, elit ped mentum mattis ac porttitor, vel vel justo purus sagittis
+                            porta lobortis, amet integer</p>
+                        <a href="blog-details.html" class="text-btn">Read more<i
+                                class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div><!-- blog-single end -->
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-single mb-30">
+                    <div class="thumb">
+                        <img src="static/assets/images/blog/3.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <div class="post-header">
+                            <h3 class="post-title"><a href="blog-details.html">Sagittisamet purus facilisi praesent
+                                mollis</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="#0"><i class="fa fa-user"></i>By Admin</a></li>
+                                <li><a href="#0"><i class="fa fa-clock-o"></i>Sep 03</a></li>
+                                <li><a href="#0"><i class="fa fa-comments"></i>03</a></li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, elit ped mentum mattis ac porttitor, vel vel justo purus sagittis
+                            porta lobortis, amet integer</p>
+                        <a href="blog-details.html" class="text-btn">Read more<i
+                                class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div><!-- blog-single end -->
+        </div>
+    </div>
+</section>
+<!-- blog-section end -->
+
+<!-- brand-section start -->
+<div class="brand-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="brand-slider-area">
+                    <div class="brand-slider owl-carousel">
+                        <div class="brand-single">
+                            <img src="static/assets/images/brand/1.png" alt="image">
+                        </div><!-- brand-single end-->
+                        <div class="brand-single">
+                            <img src="static/assets/images/brand/2.png" alt="image">
+                        </div><!-- brand-single end-->
+                        <div class="brand-single">
+                            <img src="static/assets/images/brand/3.png" alt="image">
+                        </div><!-- brand-single end-->
+                        <div class="brand-single">
+                            <img src="static/assets/images/brand/4.png" alt="image">
+                        </div><!-- brand-single end-->
+                        <div class="brand-single">
+                            <img src="static/assets/images/brand/5.png" alt="image">
+                        </div><!-- brand-single end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- brand-section end -->
+
+<!-- scroll-to-top start -->
+<div class="scroll-to-top">
+    <span class="scroll-icon">
+      <i class="flaticon-big-anchor"></i>
+    </span>
+</div>
+<!-- scroll-to-top end -->
+<!-- footer-section start -->
+<footer class="footer-section bg_img" data-background="static/assets/images/bg/footer.jpg">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row mb-none-30">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <a href="#0" class="site-logo"><img src="static/assets/images/logo2.png" alt="image"></a>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididuntlabore et dolor tempor
+                            incididunt</p>
+                        <ul class="social-links">
+                            <li><a href="#0"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="#0"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#0"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#0"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div><!-- footer-widget end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <h3 class="widget-title">Latest Blog Post</h3>
+                        <ul class="small-post-list">
+                            <li class="single-post">
+                                <h6 class="post-title"><a href="blog-details.html">Wisi mauris ipsum in eros. Adi
+                                    piscing commodo</a></h6>
+                                <ul class="post-meta">
+                                    <li><a href="#0">By Admin</a></li>
+                                    <li><a href="#0">26 Sep</a></li>
+                                </ul>
+                            </li>
+                            <li class="single-post">
+                                <h6 class="post-title"><a href="blog-details.html">Wisi mauris ipsum in eros. Adi
+                                    piscing commodo</a></h6>
+                                <ul class="post-meta">
+                                    <li><a href="#0">By Admin</a></li>
+                                    <li><a href="#0">26 Sep</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- footer-widget end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <h3 class="widget-title">Our Destination</h3>
+                        <ul class="destination-list">
+                            <li>
+                                <h6 class="place-name"><i class="fa fa-map-marker"></i><a
+                                        href="destination-details.html">Venezia - Italy</a></h6>
+                                <span class="date">25/09/2021 - 30/09/2021</span>
+                            </li>
+                            <li>
+                                <h6 class="place-name"><i class="fa fa-map-marker"></i><a
+                                        href="destination-details.html">Germany - Netherlands</a></h6>
+                                <span class="date">25/09/2021 - 30/09/2021</span>
+                            </li>
+                            <li>
+                                <h6 class="place-name"><i class="fa fa-map-marker"></i><a
+                                        href="destination-details.html">Stockhom - Sweden</a></h6>
+                                <span class="date">25/09/2021 - 30/09/2021</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- footer-widget end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <h6 class="caption"><i class="fa fa-map-marker"></i>Office Address</h6>
+                                <p>24A, Queenstown St, Log V egasUnited States</p>
+                            </li>
+                            <li>
+                                <h6 class="caption"><i class="fa fa-envelope"></i>Email Address</h6>
+                                <a href="#0">companyname@gmail.com</a>
+                                <a href="#0">demo@.gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- footer-widget end -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank"
+                                                                                 href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-section end -->
+
+<script src="static/assets/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="static/assets/js/vendor/jquery-migrate-3.0.0.js"></script>
+<script src="static/assets/js/vendor/bootstrap.min.js"></script>
+<script src="static/assets/js/vendor/jquery.nice-select.min.js"></script>
+<script src="static/assets/js/vendor/jquery-ui.min.js"></script>
+<script src="static/assets/js/vendor/lightcase.js"></script>
+<script src="static/assets/js/vendor/owl.carousel.min.js"></script>
+<script src="static/assets/js/vendor/wow.min.js"></script>
+<script src="static/assets/js/vendor/jquery.ripples-min.js"></script>
+<script src="static/assets/js/vendor/datepicker.min.js"></script>
+<script src="static/assets/js/vendor/datepicker.en.js"></script>
+<script src="static/assets/js/vendor/waypoints.min.js"></script>
+<script src="static/assets/js/vendor/jquery.counterup.min.js"></script>
+<script src="static/assets/js/contact.js"></script>
+<script src="static/assets/js/main.js"></script>
+</body>
+</html>
